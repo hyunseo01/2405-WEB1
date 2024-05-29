@@ -10,13 +10,43 @@
             width: 200px;
             height: 200px;
             background-color: pink;
+            border: 1px solid black;
+
+
+            text-align: center;
+            line-height: 200px;
+            /* line-height 는 줄높이를 설정하는 속성
+            부모컨텐츠의 높이와 같은값을 주면 수직방향으로 가운데정렬 된다.  */
+
+            /* 세로정렬로 검색하면 나오긴하는데
+            테이블에서만 쓸수있는 속성이라 활용 불가능
+            vertical-align; middle; */
+
         }
+        .box-block {
+                display: block;
+            }
+        .box-inline {
+                display: inline;
+            }
+        .box-inline-block {
+                display: inline-block;
+            }
+        .box-none {
+                display: none;
+                /* visibility: hidden; 
+                display none과 비슷하게 컨텐츠를 안보이게 만들어준다
+                실체는 존재하되 투명하게 만들어주는 기능*/
+                /* opacity: 0; 위 속성과 같은 작동을 하지만
+                투명도는 0부터 1까지 값이 연결되기떄문에
+                애니메이션 효과 부여 가능 */
+            }
     </style>
 </head>
 <body>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
+    <div class="box box-block">block</div>
+    <div class="box box-inline">inline</div><div class="box box-inline-block">inline-block</div>
+    <div class="box box-none">none</div>
+    <hr>
 </body>
 </html>
